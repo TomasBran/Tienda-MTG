@@ -1,0 +1,76 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0,23,173,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.Navbar-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+
+.Navbar-title p{
+    color:white;
+    font-size: 35px;
+}
+
+.Button-Container{
+    display: flex;
+    gap: 15px;
+}
+
+button:hover{
+    transform: scale(1.15);
+    transition: all ease-in-out 0.15s;
+}
+
+.MTG-Logo:hover{
+    animation: rotate linear infinite 0.8s;
+}
+
+@keyframes rotate { 
+    0% {
+            transform: rotate(0);
+    }
+    100% { 
+            transform: rotate(360deg);
+    }
+}
+
+.Cart-Widget:hover{
+    animation: shake linear infinite 1.25s;
+}
+
+@keyframes shake {
+    0%  {transform: translate(1px, 1px) rotate(0deg);}
+    10% {transform: translate(-1px, -2px) rotate(-1deg);}
+    20% {transform: translate(-3px, 0px) rotate(1deg);}
+    30% {transform: translate(3px, 2px) rotate(0deg);}
+    40% {transform: translate(1px, -1px) rotate(1deg);}
+    50% {transform: translate(-1px, 2px) rotate(-1deg);}
+    60% {transform: translate(-3px, 1px) rotate(0deg);}
+    70% {transform: translate(3px, 1px) rotate(-1deg);}
+    80% {transform: translate(-1px, -1px) rotate(1deg);}
+    90% {transform: translate(1px, 2px) rotate(0deg);}
+    100% {transform: translate(1px, -2px) rotate(-1deg);}
+} 
+
+.Navbar-title h1:hover{
+    animation: colorChange linear infinite 0.8s;
+}
+
+@keyframes colorChange{
+    0% {color: #FFFFFF}
+    12.5%{color: #9400D3}
+    25%{color: #4B0082}
+    37.5%{color: #0000FF}
+    50%{color: #00FF00}
+    62.5%{color: #FFFF00}
+    75%{color: #FF7F00}
+    87.5%{color: #FF0000}
+    100% {color: #FFFFFF}
+}
