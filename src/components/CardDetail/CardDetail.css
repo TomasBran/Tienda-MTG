@@ -1,0 +1,39 @@
+.CardItem {
+    width: 500px;
+    padding: 30px;
+    margin: 30px;
+    font-size: 10px;
+    background-color: papayawhip;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+}
+
+.CardHeader{
+    font-size: 50px;
+}
+
+.ContainerItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+.ItemHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.Info {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.CardImg {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+}

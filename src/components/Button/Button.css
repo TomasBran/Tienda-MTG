@@ -1,0 +1,49 @@
+.NavButton, .Button, .ActiveNavButton{
+    background-color: rgb(126, 30, 89);
+    border-radius: 10%;
+    border-color: rgba(255, 255, 255, 0);
+    height: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgb(189, 187, 187)
+}
+
+.NavButton, .ActiveNavButton{
+    width: 8vw;
+    font-size: 15px;
+}
+
+.ActiveNavButton{
+    background-color: rgb(145, 43, 106);
+    transform: scale(1.1);
+    color:white;
+}
+
+.NavButton:hover, .ActiveNavButton:hover{
+    transform: scale(1.10);
+    background-color: rgb(145, 43, 106);
+    transition: all ease-in-out 0.25s;
+    color:white;
+}
+
+
+
+
+.CardButtons button, .Button{
+    width: 5vw;
+    height: 2vw;
+    font-size: 1vw;
+    text-align: center;
+    
+}
+
+.Button:hover{
+    transition: all ease-in 0.5s;
+    transform: translate(0px, -10px) scale(1.1);
+    color:rgb(255, 255, 255)
+}
+
+.Button-Container{
+    text-align: center;
+    line-height: 230%;
+}

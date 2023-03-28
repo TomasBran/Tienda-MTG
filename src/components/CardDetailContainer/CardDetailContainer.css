@@ -1,0 +1,15 @@
+.CardDetailContainer {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    text-align: center;
+    width: 700px;
+    align-self: center;
+    margin: 20px 0px;
+    background-color: rgb(165, 110, 90);
+    border-radius: 10%;
+    margin-top: 125px;
+    
+}

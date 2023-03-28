@@ -1,0 +1,47 @@
+.CardPanel{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    width:100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.IndividualCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    gap: 5px;
+    background-color: rgba(143, 104, 88, 0.808);
+    border-radius: 10%;
+    margin-top: 30px;
+}
+
+.IndividualCard img{
+    height: 20vw;
+}
+
+.CardButtons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px
+    
+}
+
+p{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 1.5vw;
+}
+
+.CardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}

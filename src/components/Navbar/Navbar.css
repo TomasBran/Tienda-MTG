@@ -2,7 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, rgba(0,23,173,1) 0%, rgba(0,0,0,1) 100%);
+    background-color: rgb(143, 104, 88);
+    position:fixed;
+    width: 100%;
+    /* background: linear-gradient(90deg, rgba(0,23,173,1) 0%, rgba(0,0,0,1) 100%); */
 }
 
 .Navbar-title{
@@ -13,9 +16,10 @@
 }
 
 
-.Navbar-title p{
-    color:white;
+.Title-Link{
+    color:rgb(65, 19, 19);
     font-size: 35px;
+    text-decoration: none;
 }
 
 .Button-Container{
@@ -23,10 +27,7 @@
     gap: 15px;
 }
 
-button:hover{
-    transform: scale(1.15);
-    transition: all ease-in-out 0.15s;
-}
+
 
 .MTG-Logo:hover{
     animation: rotate linear infinite 0.8s;
@@ -59,7 +60,7 @@ button:hover{
     100% {transform: translate(1px, -2px) rotate(-1deg);}
 } 
 
-.Navbar-title h1:hover{
+.Title-Link:hover{
     animation: colorChange linear infinite 0.8s;
 }
 
