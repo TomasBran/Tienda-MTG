@@ -1,8 +1,13 @@
 
 .LanguageButtons{
     position: fixed;
-    bottom: 1.5%;
+    /* bottom: 1.5%; */
+    top: 10%;
     right: 1%;
+    background-color: rgb(167, 207, 199);
+    padding: 6px 0px 6px 6px;
+    border-radius: 10px;
+    border: solid 2px black;
 }
 
 .SpanishButton, .EnglishButton{
@@ -13,15 +18,14 @@
     font-weight: bold;
     color:white;
     -webkit-text-stroke: 1.1px black;
-}
-
-.SpanishButton:hover, .EnglishButton:hover{
-    transform: scale(1.2);
+    opacity: 50%;
+    transform: scale(0.8);
 }
 
 .ActiveLanguage{
-    transform: scale(1.2);
+    transform: scale(1);
     border-color: white;
+    opacity: 100%;
 }
 
 .SpanishButton{
