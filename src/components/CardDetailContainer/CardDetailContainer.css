@@ -3,13 +3,27 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 84vh;
     text-align: center;
-    width: 700px;
+    min-width: 700px;
+    max-width: 850px;
     align-self: center;
     margin: 20px 0px;
-    background-color: rgb(165, 110, 90);
-    border-radius: 10%;
+    background-color: rgba(177, 177, 177, 0.836);;
+    border-radius: 50px;
     margin-top: 125px;
     
+}
+ 
+.LoadingContainer, .ErrorContainer{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+}
+
+.ErrorText{
+    color:rgb(231, 231, 231);
+    font-size: 50px;
 }

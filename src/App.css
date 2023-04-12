@@ -1,4 +1,13 @@
 .App{
     display: flex;
     flex-direction: column;
+    /* background-color: rgb(201, 144, 182); */
+    
+    /*https://cdn.tapetender70er.de/media/image/06/95/65/790221-A_Flapper_518x389.jpg*/
+    background-image: url("https://images.alphacoders.com/265/265693.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;;
+    min-height: 100vh;
 }

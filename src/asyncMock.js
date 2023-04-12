@@ -3,8 +3,14 @@ const cards = [
     /*COMMON CARDS*/
     {
         id: '1',
-        name: 'Duress',
+        name:
+        {
+            english: 'Duress',
+            spanish: 'Coacción'
+
+        },
         rarity: 'Comunes',
+        englishRarity: 'Common',
         cardType:{
             english: 'Sorcery',
             spanish: 'Conjuro'
@@ -28,8 +34,14 @@ const cards = [
 
     {
         id: '2',
-        name: 'Abrade',
+        name:
+        {
+            english: 'Abrade',
+            spanish: 'Erosionar'
+
+        },
         rarity: 'Comunes',
+        englishRarity: 'Common',
         cardType:{
             english: 'Instant',
             spanish: 'Instantáneo'
@@ -56,8 +68,14 @@ const cards = [
 
     {
         id: '3',
-        name: 'Disdainful Stroke',
+        name:
+        {
+            english: 'Disdainful Stroke',
+            spanish: 'Golpe altanero'
+
+        },
         rarity: 'Comunes',
+        englishRarity: 'Common',
         cardType:{
             english: 'Instant',
             spanish: 'Instantáneo'
@@ -80,8 +98,14 @@ const cards = [
 
     {
         id: '4',
-        name: 'Negate',
+        name:
+        {
+            english: 'Negate',
+            spanish: 'Negar'
+
+        },
         rarity: 'Comunes',
+        englishRarity: 'Common',
         cardType:{
             english: 'Instant',
             spanish: 'Instantáneo'
@@ -107,8 +131,14 @@ const cards = [
     /*UNCOMMON CARDS*/
     {
         id: '5',
-        name: 'Go for the Throat',
+        name:
+        {
+            english: 'Go for the Throat',
+            spanish: 'Golpe a la garganta'
+
+        },
         rarity: 'Poco Comunes',
+        englishRarity: 'Uncommon',
         cardType:{
             english: 'Instant',
             spanish: 'Instantáneo'
@@ -131,8 +161,14 @@ const cards = [
 
     {
         id: '6',
-        name: 'Cut Down',
+        name:
+        {
+            english: 'Cut Down',
+            spanish: 'Destrizar'
+
+        },
         rarity: 'Poco Comunes',
+        englishRarity: 'Uncommon',
         cardType:{
             english: 'Instant',
             spanish: 'Instantáneo'
@@ -155,8 +191,14 @@ const cards = [
 
     {
         id: '7',
-        name: 'Corpse Appraiser',
+        name:
+        {
+            english: 'Corpse Appraiser',
+            spanish: 'Tasador de cadáveres'
+
+        },
         rarity: 'Poco Comunes',
+        englishRarity: 'Uncommon',
         cardType:{
             english: 'Creature - Vampire Rogue',
             spanish: 'Criatura - Bribón Vampiro'
@@ -180,8 +222,14 @@ const cards = [
 
     {
         id: '8',
-        name: 'Bloodtithe Harvester',
+        name:
+        {
+            english: 'Bloodtithe Harvester',
+            spanish: 'Cosechador de diezmos de sangre'
+
+        },
         rarity: 'Poco Comunes',
+        englishRarity: 'Uncommon',
         cardType:{
             english: 'Creature - Vampire',
             spanish: 'Criatura - Vampiro'
@@ -211,8 +259,14 @@ const cards = [
 
     {
         id: '9',
-        name: 'Reckoner Bankbuster',
+        name:
+        {
+            english: 'Reckoner Bankbuster',
+            spanish: 'Destruyebancos criminal'
+
+        },
         rarity: 'Raras',
+        englishRarity: 'Rare',
         cardType:{
             english: 'Artifact - Vehicle',
             spanish: 'Artefacto - Vehiculo'
@@ -239,8 +293,14 @@ const cards = [
 
     {
         id: '10',
-        name: 'Fable of the Mirror-Breaker',
+        name:
+        {
+            english: 'Fable of the Mirror-Breaker',
+            spanish: 'Fábula del rompe espejos'
+
+        },
         rarity: 'Raras',
+        englishRarity: 'Rare',
         cardType:{
             english: 'Enchantment - Saga',
             spanish: 'Encantamiento - Saga'
@@ -269,8 +329,14 @@ const cards = [
 
     {
         id: '11',
-        name: "Brotherhood's End",
+        name:
+        {
+            english: "Brotherhood's End",
+            spanish: 'Fin de la hermandad'
+
+        },
         rarity: 'Raras',
+        englishRarity: 'Rare',
         cardType:{
             english: 'Sorcery',
             spanish: 'Conjuro'
@@ -297,8 +363,14 @@ const cards = [
 
     {
         id: '12',
-        name: 'Unlicensed Hearse',
+        name:
+        {
+            english: 'Unlicensed Hearse',
+            spanish: 'Vehículo fúnebre sin licencia'
+
+        },
         rarity: 'Raras',
+        englishRarity: 'Rare',
         cardType:{
             english: 'Artifact - Vehicle',
             spanish: 'Artefacto - Vehículo'
@@ -327,8 +399,14 @@ const cards = [
 
     {
         id: '13',
-        name: 'Sheoldred, the Apocalypse',
+        name:
+        {
+            english: 'Sheoldred, the Apocalypse',
+            spanish: 'Sheoldred, el Apocalipsis'
+
+        },
         rarity: 'Raras Míticas',
+        englishRarity: 'Mythic Rare',
         cardType:{
             english: 'Legendary Creature — Phyrexian Praetor',
             spanish: 'Criatura Legendaria - Magistrado Pirexiano'
@@ -355,8 +433,14 @@ const cards = [
 
     {
         id: '14',
-        name: 'The Wandering Emperor',
+        name:
+        {
+            english: 'The Wandering Emperor',
+            spanish: 'La emperatriz errante'
+
+        },
         rarity: 'Raras Míticas',
+        englishRarity: 'Mythic Rare',
         cardType:{
             english: 'Legendary Planeswalker',
             spanish: 'Planeswalker Legendario'
@@ -387,8 +471,14 @@ const cards = [
 
     {
         id: '15',
-        name: 'Liliana of the Veil',
+        name:
+        {
+            english: 'Liliana of the Veil',
+            spanish: 'Liliana del Velo'
+
+        },
         rarity: 'Raras Míticas',
+        englishRarity: 'Mythic Rare',
         cardType:{
             english: 'Legendary Planeswalker — Liliana',
             spanish: 'Planeswalker Legendario - Liliana'
@@ -415,8 +505,14 @@ const cards = [
 
     {
         id: '16',
-        name: 'Sanctuary Warden',
+        name:
+        {
+            english: 'Sanctuary Warden',
+            spanish: 'Guarda del santuario'
+
+        },
         rarity: 'Raras Míticas',
+        englishRarity: 'Mythic Rare',
         cardType:{
             english: 'Creature — Angel Soldier',
             spanish: 'Criatura - Soldado Ángel'
@@ -443,6 +539,7 @@ const cards = [
 ]
 
 
+
 export const getCards = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -462,7 +559,13 @@ export const getCardById = (cardId) => {
 export const getCardBySearchName = (name) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(cards.find(card => (card.name.toLowerCase().includes(name.toLowerCase()))))
+            const foundCard = cards.find(card => (card.name.english.toLowerCase().includes(name.toLowerCase())))
+            
+            if(foundCard!==undefined){
+                resolve(foundCard)
+            } else{
+                resolve("not found")
+            }
         }, 750)
     })
 }

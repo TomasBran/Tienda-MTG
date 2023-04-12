@@ -1,0 +1,76 @@
+.Cart-Container{
+    margin: 120px 20%;
+    background-color: rgba(238, 238, 238, 0.76);
+    min-height: 70vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    color:rgb(68, 68, 68);
+}
+
+.Cart-Individual-Item, .Cart-Title, .Cart-Total{
+    display: grid;
+    grid-template-columns: 5fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.Cart-Title{
+    border-bottom: 2px solid rgb(68, 68, 68);
+}
+
+.Cart-Individual-Item{
+    border: 1px dotted rgb(68, 68, 68);
+    line-height: 290%;
+    height: 50px;
+}
+
+.Cart-Container img{
+    margin-bottom: 17px;
+    
+}
+
+
+.Cart-Container img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+.Cart-Total{
+    border-top: 2px solid rgb(68, 68, 68);
+    color:black;
+    font-size: 25px;
+    line-height: 290%;
+    height: 50px;
+}
+
+.Cart-Buttons-Container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 20px;
+}
+
+.Cart-Button{
+    margin:5px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(20, 26, 116);
+    color:white;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+}
+
+.Cart-Button:hover{
+    background-color: rgb(74, 84, 212);
+    color:white;
+}

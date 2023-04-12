@@ -1,0 +1,35 @@
+
+.LanguageButtons{
+    position: fixed;
+    bottom: 1.5%;
+    right: 1%;
+}
+
+.SpanishButton, .EnglishButton{
+    margin-right: 10px;
+    width: 50px;
+    border-color: rgb(53, 53, 53);
+    height: 35px;
+    font-weight: bold;
+    color:white;
+    -webkit-text-stroke: 1.1px black;
+}
+
+.SpanishButton:hover, .EnglishButton:hover{
+    transform: scale(1.2);
+}
+
+.ActiveLanguage{
+    transform: scale(1.2);
+    border-color: white;
+}
+
+.SpanishButton{
+    background: url("https://cdn.pixabay.com/photo/2012/04/16/12/06/flag-35697_1280.png");
+    background-size: cover;
+}
+
+.EnglishButton{
+    background: url("https://static.vecteezy.com/system/resources/previews/004/221/596/original/united-states-of-america-flag-icon-free-vector.jpg");
+    background-size: cover;
+}

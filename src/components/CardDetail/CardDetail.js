@@ -1,40 +1,50 @@
 import ItemCount from "../CardCount/CardCount"
 import '../CardDetail/CardDetail.css'
+import { useCart } from "../../context/CartContext"
+import { useLanguage } from "../../context/LanguageContext";
 
 const CardDetail = ({id, name, img, description, cardType, price, stock}) => {
+
+
+    const {addCard} = useCart();
+    const { isSpanishActive } = useLanguage();
+  
+
 
     const handleOnAdd = (quantity) => {
         const cardToAdd = {
           id, name, price, quantity
         }
+        addCard(cardToAdd)
     }
+
 
     if(id!==undefined){
       return (
         <article className='CardInfo'>
             <header className='Header'>
               <h2 className='CardHeader'>
-                {name}
+                {isSpanishActive ? name.spanish : name.english}
               </h2>
             </header>
 
             <picture>
-              <img src={img} alt={name} className="CardImg"/>
+              <img src={img} alt={name.english} className="CardImg"/>
             </picture>
 
             <section>
               
               <p className='Info'>
-                {cardType.spanish}
+                {isSpanishActive ? cardType.spanish : cardType.english}
               </p>
               <h3 className='Info'>
-                {description.spanish}
+                {isSpanishActive ? description.spanish : description.english}
               </h3>
               <p className='Info'>
-                Precio: US${price.toFixed(2)}
+                {(isSpanishActive ? "Precio: US" : "Price: ")}${price.toFixed(2)}
               </p>
               <footer className='ItemFooter'>
-                <ItemCount onAdd={handleOnAdd} stock={stock} />
+                <ItemCount onAdd={handleOnAdd} stock={stock} id={id}/>
               </footer>
 
             </section>
@@ -45,38 +55,6 @@ const CardDetail = ({id, name, img, description, cardType, price, stock}) => {
         <></>
       )
     }
-
-
-
-
-
-    // const {cardId} = useParams();
-
-    // const [cards, setCards] = useState([])
-
-    // useEffect(() => {
-    //   getCards()
-    //   .then(data => {
-    //     setCards(data)
-    //   })
-    
-    // },[])
-
-    // if(cards[0]===undefined){
-    //   return(
-    //     <div style={{display:"flex", justifyContent:"center"}}>
-    //       <img src="https://media.tenor.com/-n8JvVIqBXkAAAAM/dddd.gif" alt="loading-logo"/>
-
-    //     </div>
-    //   )
-    // }
-    
-    // return (
-        
-    //         <div className="CardPanel">
-    //           <Card card={cards[cardId-1]}/>
-    //         </div>
-    //       ) 
 
 }
 

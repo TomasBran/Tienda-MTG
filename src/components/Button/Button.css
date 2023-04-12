@@ -1,6 +1,6 @@
 .NavButton, .Button, .ActiveNavButton{
-    background-color: rgb(126, 30, 89);
-    border-radius: 10%;
+    background-color: rgb(20, 26, 116);
+    border-radius: 10px;
     border-color: rgba(255, 255, 255, 0);
     height: 40px;
     font-weight: bold;
@@ -14,23 +14,32 @@
 }
 
 .ActiveNavButton{
-    background-color: rgb(145, 43, 106);
+    background-color: rgb(74, 84, 212);
     transform: scale(1.1);
     color:white;
 }
 
 .NavButton:hover, .ActiveNavButton:hover{
     transform: scale(1.10);
-    background-color: rgb(145, 43, 106);
+    background-color: rgb(74, 84, 212);
     transition: all ease-in-out 0.25s;
     color:white;
 }
 
+.SearchButton{
+    padding: 8px;
+    margin-left: 8px;
+    background-color: grey;
+    color:rgb(34, 34, 34)
+}
+
+.SearchButton:hover{
+    background-color: grey;
+}
 
 
-
-.CardButtons button, .Button{
-    width: 5vw;
+.Button{
+    width: 8vw;
     height: 2vw;
     font-size: 1vw;
     text-align: center;
@@ -38,12 +47,17 @@
 }
 
 .Button:hover{
-    transition: all ease-in 0.5s;
-    transform: translate(0px, -10px) scale(1.1);
+    transition: all ease-in 0.07s;
+    transform:scale(1.2);
     color:rgb(255, 255, 255)
 }
 
 .Button-Container{
     text-align: center;
     line-height: 230%;
+}
+
+.CardButtons{
+    text-align: center;
+    line-height: 190%;
 }

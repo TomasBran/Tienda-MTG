@@ -19,6 +19,7 @@
     border-radius: 25px;
 }
 
+
 .ItemHeader {
     display: flex;
     justify-content: center;
@@ -37,3 +38,4 @@
     object-position: center;
     margin-bottom: 20px;
 }
+

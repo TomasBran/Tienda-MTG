@@ -5,7 +5,6 @@
     gap: 20px;
     justify-content: space-around;
     width:100%;
-    background-color: rgb(255, 255, 255);
 }
 
 .IndividualCard{
@@ -14,9 +13,17 @@
     align-items: center;
     width: 20%;
     gap: 5px;
-    background-color: rgba(143, 104, 88, 0.808);
-    border-radius: 10%;
-    margin-top: 30px;
+    background-color: rgba(134, 134, 134, 0.808);
+    border-radius: 20px;
+    margin: 15px 0px;
+}
+
+.IndividualCard h1{
+    font-size: 1.25vw;
+}
+
+.IndividualCard:hover{
+    background-color: rgb(177, 177, 177);
 }
 
 .IndividualCard img{
@@ -44,4 +51,40 @@ h1{
     flex-direction: column;
     align-items: center;
     margin-top: 120px;
+}
+
+.Comunes{
+    background-color: #323231;
+    color:rgb(236, 236, 236)
+}
+
+.Poco.Comunes{
+    background-color: #bfbab7;
+    color:#323231;
+    border-color: black;
+}
+
+.Raras{
+    background-color: #ede3bb;
+    color: #323231;
+    border-color: black;
+}
+
+.Raras.Míticas{
+    background-color: #bd5539;
+    color: black;
+    border-color: white;
+}
+
+.Comunes, .Poco.Comunes, .Raras, .Raras.Míticas{
+    border-radius: 10px;
+    padding: 10px;
+    border-style: groove;
+}
+
+.Welcome-Title{
+    background-color: #32323198;
+    border-radius: 10px;
+    padding: 10px;
+    color:rgb(235, 235, 235)
 }
