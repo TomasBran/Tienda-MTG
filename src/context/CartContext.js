@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
         const card = cart.find(card => card.id === id)
         
         if(!card){
-            toast.warning(isSpanishActive ? `No hay copias de esta carta en el carro para eliminar.` : `There's no copies of this card in the cart.`, 
+            toast.warning(isSpanishActive ? `No hay copias de esta carta en el carro para eliminar.` : `There are no copies of this card in the cart.`, 
             {position: "bottom-right", autoClose: 5000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "dark"})
             return
         }
