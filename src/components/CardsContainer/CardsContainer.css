@@ -20,6 +20,11 @@
 
 .IndividualCard h1{
     font-size: 1.25vw;
+    
+}
+
+.IndividualCardTitle::first-letter{
+    text-transform: capitalize;
 }
 
 .IndividualCard:hover{

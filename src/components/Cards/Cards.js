@@ -11,7 +11,7 @@ const Card = ({card}) => {
         return(
 
             <div className="IndividualCard">
-                <h1>{(currentLanguage==="spanish" ? card.name.spanish : card.name.english)}</h1>
+                <h1 className="IndividualCardTitle">{(currentLanguage==="spanish" ? card.name.spanish : card.name.english)}</h1>
                 <img src={card.img} alt={card.name.english} />
                 <p>{(currentLanguage==="spanish" ? "Precio: US" : "Price: ")}${(card.price).toFixed(2)}</p>
                 

@@ -1,12 +1,14 @@
 import { useState, useEffect, React } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { getCardById } from "../../asyncMock"
 import CardDetail from "../CardDetail/CardDetail"
 import './CardDetailContainer.css'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReactLoading from 'react-loading';
 import { useLanguage } from "../../context/LanguageContext"
+
+import { db } from "../../service/firebase/firebaseConfig";
+import { getDoc, doc } from "firebase/firestore";
 
 
 const CardDetailContainer = () => {
@@ -18,13 +20,21 @@ const CardDetailContainer = () => {
     const { isSpanishActive } = useLanguage()
 
     useEffect(() =>{
-        getCardById(cardId).then(response =>{
-            setCard(response)
-            setWasCardChecked(true)
-        })
-        .catch(error => {
-            console.log(error)
-        })
+
+        const cardRef = doc(db, "cardList", cardId)
+
+        
+        getDoc(cardRef)
+            .then(snapshot => {
+                const data = snapshot.data()
+                const cardAdapted = {id: snapshot.id, ...data}
+
+                if(cardAdapted.id!=="search"){
+                    setCard(cardAdapted)
+                }
+                setWasCardChecked(true)
+            })
+
     }, [cardId])
 
     if(card){
@@ -42,14 +52,7 @@ const CardDetailContainer = () => {
                 onClose: () => {
                     navigate("/Tienda-MTG");
                 },
-                position: "top-center",
-                autoClose: false,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
+                position: "top-center", autoClose: false, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "dark",
             })
         }
             
@@ -59,6 +62,7 @@ const CardDetailContainer = () => {
             <div className="ErrorContainer">
                 
                 <ReactLoading type="spin" color="#ffffff" height={350} width={250} />
+
             </div>
         )
     }

@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import './CardsContainer.css';
-import { getCardByRarity, getCards } from "../../asyncMock";
 import { useEffect, useState, React } from 'react'
 import Card from "../Cards/Cards";
 import ReactLoading from 'react-loading';
 import { useLanguage } from "../../context/LanguageContext";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../service/firebase/firebaseConfig";
 
 const CardContainer = () => {
 
@@ -17,15 +18,21 @@ const CardContainer = () => {
     useEffect(() => {
       setCards([])
 
-      const asyncFunction = rarityId ? getCardByRarity : getCards
-
-      asyncFunction(rarityId)
-      .then(data => {
-        setCards(data)
-      })
-      .catch(error => {
-        console.log(error)
-      })
+      const cardsRef = rarityId
+      ? query(collection(db, 'cardList'), where('rarity', "==", rarityId))
+      : collection(db, 'cardList')
+      
+      getDocs(cardsRef)
+        .then(snapshot => {
+          const cardsAdapted = snapshot.docs.map(doc => {
+            const data = doc.data()
+            return {id: doc.id, ...data}
+          })
+          setCards(cardsAdapted)
+        })
+        .catch(error => {
+          console.log(error)
+        })
     
     },[rarityId])
 

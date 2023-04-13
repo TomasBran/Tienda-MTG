@@ -12,6 +12,10 @@
     font-size: 50px;
 }
 
+.CardHeader::first-letter{
+    text-transform: capitalize;
+}
+
 .ContainerItem {
     display: flex;
     flex-direction: column;

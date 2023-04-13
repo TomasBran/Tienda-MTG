@@ -3,7 +3,7 @@ import '../Button/Button.css'
 import logo from './Assets/logo.png'
 import CartWidget from '../CartWidget/CartWidget.js'
 import { useState } from 'react'
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import { useLanguage } from '../../context/LanguageContext'
 
 const Navbar = () => {
@@ -11,9 +11,9 @@ const Navbar = () => {
     const [input, setInput] = useState('')
 
     const { isSpanishActive } = useLanguage()
+    const navigate = useNavigate()
 
     return (
-
 
         <nav className="Navbar">
             <div className="Navbar-title">
@@ -30,10 +30,10 @@ const Navbar = () => {
             </div>
 
 
-            <div>
-                <input value={input} onChange={(e) => setInput(e.target.value)} placeholder={(isSpanishActive ? "Nombre original" : "Original card name")}/>
-                <Link className='NavButton SearchButton' to={`/card/search/${input}`}>{(isSpanishActive ? "Buscar" : "Search")}</Link>
-            </div>
+            <form onSubmit={(event) => { event.preventDefault(); navigate(`/card/search/${input}`); setInput("")}}>
+                <input value={input} onChange={(e) => setInput(e.target.value)} placeholder={(isSpanishActive ? "Nombre de la carta" : "Card name")}/>
+                <button className='NavButton SearchButton' >{(isSpanishActive ? "Buscar" : "Search")}</button>
+            </form>
     
 
             <CartWidget/>
