@@ -74,3 +74,25 @@
     background-color: rgb(74, 84, 212);
     color:white;
 }
+
+.disabled-Cart-Button{
+    margin:5px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(87, 87, 88);
+    color:rgb(204, 204, 204);
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+}
+
+.disabled-Cart-Button:hover{
+    color:rgb(204, 204, 204);
+    cursor:not-allowed;
+}
+
+.Cart-Card-Title::first-letter{
+    text-transform: capitalize;
+}

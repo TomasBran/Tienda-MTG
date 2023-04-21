@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './CardCount.css'
 import { useCart } from '../../context/CartContext'
@@ -14,13 +14,23 @@ const ItemCount = ({stock = 0, initial = 1, onAdd, id})=> {
 
    const [quantity, setQuantity] = useState(initial)
 
+   const [ isOutOfStock, setIsOutOfStock] = useState(false)
+
+    useEffect(() => {
+        if (stock===0){
+            setIsOutOfStock(true)
+       }
+    }, [stock])
+    
+
+   
 
    const increment = () => {
        if(quantity < stock) {
            setQuantity(quantity+1)
        }
        else{
-        toast.warning(isSpanishActive ?  `Solo quedan ${stock} unidades en stock` : `Only ${stock} units left in stock`,
+        toast.warning(isSpanishActive ?  `Quedan ${stock} unidades en stock` : `${stock} units left in stock`,
         { position: "bottom-right", autoClose: 5000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "dark" })
        }
    }
@@ -43,7 +53,8 @@ const ItemCount = ({stock = 0, initial = 1, onAdd, id})=> {
                 <button className="DetailButton" onClick={increment}>+</button>
             </div>
             <div className='AddRemoveButtons'>
-                <button className="DetailButton" onClick={() => {onAdd(quantity); setQuantity(1)}}>{(isSpanishActive ? "Añadir al Carro" : "Add to cart")}</button>
+                <button className={isOutOfStock ? "NoStockButton" :"DetailButton"} onClick={() => {!isOutOfStock && onAdd(quantity); setQuantity(1)}}>{(isSpanishActive ? "Añadir al Carro" : "Add to cart")}</button>
+                <p className='NoStock'>{isOutOfStock && (isSpanishActive ? "Esta carta no está en stock" : "This card is not on stock")}</p>
                 <button className="DetailButton" onClick={() => removeCard(id)}>{(isSpanishActive ? "Remover del carro" : "Remove from cart")}</button>
             </div>
             <div>

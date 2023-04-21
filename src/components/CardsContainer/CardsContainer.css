@@ -16,6 +16,7 @@
     background-color: rgba(134, 134, 134, 0.808);
     border-radius: 20px;
     margin: 15px 0px;
+    box-shadow: 0px 0px 4px 0.3px rgba(0, 0, 0, 0.616);
 }
 
 .IndividualCard h1{
@@ -29,10 +30,15 @@
 
 .IndividualCard:hover{
     background-color: rgb(177, 177, 177);
+    box-shadow: 0px 0px 4px 0.3px rgb(0, 0, 0);
 }
 
 .IndividualCard img{
     height: 20vw;
+}
+
+.IndividualCard img:hover{
+    cursor:zoom-in;
 }
 
 .CardButtons{

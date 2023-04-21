@@ -59,7 +59,13 @@ export const CartProvider = ({ children }) => {
 
     }
 
-    const clearCart = () => {
+    const clearCart = (askForConfirmation) => {
+
+        if(askForConfirmation === true){
+            setCart([])
+            return
+        }
+
         if(cart.length===0){
             toast.warning(isSpanishActive ? `El carro ya está vacío` : `Cart is already empty.`,
                 {position: "bottom-right", autoClose: 5000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "dark"})

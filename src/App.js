@@ -9,6 +9,7 @@ import { CartProvider } from './context/CartContext';
 import LanguageButtons from './components/Button/LanguageButtons/LanguageButtons';
 import { LanguageProvider } from './context/LanguageContext';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 
 
@@ -31,7 +32,7 @@ function App() {
                   <Route path="/card/:cardId" element={<CardDetailContainer/>}/>
                   <Route path="/card/search/:cardName" element={<SearchDetailedItem/>}/>
                   <Route path="/cart" element={<Cart/>}/>
-                  <Route path="/checkout" element={<h1>Checkout</h1>}/>
+                  <Route path="/checkout" element={<Checkout/>}/>
                 </Routes>
                 <LanguageButtons/>
               </CartProvider>

@@ -1,0 +1,43 @@
+.Contact-Form{
+    display: flex;
+    flex-direction: column;
+    margin: 150px 30%;
+    padding: 30px 50px 50px 50px;
+    align-items: center;
+    gap: 30px;
+    background-color: rgba(238, 238, 238, 0.76);
+    border-radius: 10px;
+    box-shadow: -1px 0px 4px 0.3px rgba(0, 0, 0, 0.616);
+}
+
+.Contact-Form input{
+    width: 80%;
+    text-align: center;
+}
+.Contact-Form button{
+    width: 30%;
+}
+
+.Confirm-Button{
+    margin:5px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgb(20, 26, 116);
+    color:white;
+    border-radius: 10px;
+    text-decoration: none;
+    min-width: 200px;
+    text-align: center;
+    border:none;
+}
+
+.Confirm-Button:hover{
+    background-color: rgb(74, 84, 212);
+    color:white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

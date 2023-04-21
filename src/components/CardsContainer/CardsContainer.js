@@ -9,6 +9,7 @@ import { db } from "../../service/firebase/firebaseConfig";
 
 const CardContainer = () => {
 
+
   const { isSpanishActive } = useLanguage()
 
     const [cards, setCards] = useState([])

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { useCart } from '../../context/CartContext'
 import { useLanguage } from '../../context/LanguageContext'
 import './Cart.css'
@@ -8,8 +9,22 @@ const Cart = () => {
 
     const { isSpanishActive } = useLanguage()
 
+    const [isCartEmpty, setIsCartEmpty] = useState(true)
+
     const {cart, totalMoney, totalQuantity, removeCard, clearCart} = useCart()
 
+
+    useEffect(() => {
+        if(cart.length===0){
+            setIsCartEmpty(true)
+        } else{
+            setIsCartEmpty(false)
+        }
+    
+    }, [cart])
+    
+
+   
     
     return(
         <div className="Cart-Container">
@@ -40,7 +55,7 @@ const Cart = () => {
              </div>
              <div className='Cart-Buttons-Container'>
                 <Link className='Cart-Button' to="/Tienda-MTG" style={{color:"white"}}>{(isSpanishActive ? "Volver" : "Back")}</Link>
-                <Link className='Cart-Button'>{(isSpanishActive ? "Comprar" : "Buy")}</Link>
+                <Link className={isCartEmpty ? 'disabled-Cart-Button' : 'Cart-Button'} to={isCartEmpty ? "/cart" : "/checkout"}>{(isSpanishActive ? "Comprar" : "Buy")}</Link>
              </div>
 
         </div>
