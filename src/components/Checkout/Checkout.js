@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ContactForm from "../ContactForm/ContactForm"
 import { useCart } from "../../context/CartContext"
 import { useLanguage } from "../../context/LanguageContext"
@@ -21,9 +21,8 @@ const Checkout = () => {
 
     const navigate = useNavigate()
     const [userInfo, setUserInfo] = useState()
+    const [resetButton, setResetButton] = useState(false)
 
-
-    /*LEER LINEA 151 PARA VER PORQUE ESTO NO SE USA*/
     const resetStock = async () => {
 
         const cardsRef = collection(db, 'cardList')
@@ -40,6 +39,8 @@ const Checkout = () => {
 
         toast.success(`Se resetearon los stocks para poder seguir testeando.`, {position: "top-center", autoClose: 5000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "dark",
         })
+
+        setResetButton(false)
 
     }
 
@@ -109,6 +110,24 @@ const Checkout = () => {
             setLoading(false)
         }
     }
+
+
+    const triggerResetButton = (e) => {
+        e.preventDefault()
+                   
+        if((e.metaKey || e.ctrlKey) && e.key === 'x'){
+            setResetButton(prev => !prev)
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('keydown', triggerResetButton)
+    
+      return () => {
+        document.removeEventListener('keydown', triggerResetButton)
+      }
+    }, [])
+    
     
     if(orderId){
         Swal.fire({
@@ -148,10 +167,10 @@ const Checkout = () => {
         <div>
             <ContactForm onConfirm={createOrder}/>
 
-            {/*TUTORES: LES DEJO UN BOTÓN PARA HABILITAR EL RESET DE STOCK, POR SI TESTEANDO SE QUEDAN SIN STOCK DE UNA CARTA (EMPIEZAN CON 50 DE CADA UNA). SOLO DESCOMENTEN LA LINEA MAS ABAJO (154), DENTRO DEL CONTAINER, Y AL MOMENTO DE HACER EL CHECKOUT LES VA A HABILITAR EL BOTÓN.*/}
-
-            <div className="ResetContainer">
-                 <button onClick={resetStock}>RESET STOCK</button>
+            {/* Comentar el siguiente div cuando no sea para corrección */}
+            <div className="ResetContainer"> 
+                 <p className={resetButton ? "DisabledReset" : ""}>PRESIONA CTRL+X PARA HABILITAR/DESHABILITAR EL RESET DE STOCK</p>
+                 <button className={!resetButton ? "DisabledReset" : ""} onClick={resetStock}>RESET STOCK</button>
             </div>
         </div>
     )

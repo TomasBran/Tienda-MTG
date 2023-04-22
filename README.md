@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Tienda Magic The Gathering
+## Hecho en ReactJS por Tomás Bran
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Este proyecto es un e-commerce del famoso juego de cartas Magic The Gathering.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Menú principal con todas las cartas. Expandible sumando los datos correspondientes a la db de firebase.
+- Menú por categorías. (Comunes, Poco comunes, Raras y Míticas)
+- Buscador de cartas.
+- Zoom/preview a las imágenes de las cartas.
+- Cartas detalladas.
+- Alertas visuales en cada una de las acciones.
+- Alertas en las acciones que no se pueden ejecutar (error/warning).
+- Carro con vista para eliminar objetos individual o colectivamente.
+- Confirmación de elección para decisiones importantes.
+- **Posibilidad de cambio de lenguaje en TODO el entorno, (ubicado arriba a la derecha), manteniendo los textos originales de las cartas en sus respectivos idiomas oficiales. (Nombre, tipo, efecto, etc)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Modo de uso
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Es un e-commerce típico, en el cual seleccionás el producto, elegís la cantidad que quieras, (recordando que la cantidad máxima de misma carta en un mazo es 4, pero hay gente que compra para revender), vas al carro, corroborás que sea todo lo que necesitás, y vas al checkout.
 
-### `npm test`
+## Dependencias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Utilizo las librerías visuales Toastify y Sweet Alerts, y está la base de datos alojada en Firebase.
 
-### `npm run build`
+## A tener en cuenta (Profesor)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Los datos de la Firebase están también incluidos y comentados en el archivo "./src/service/firebase/firebaseConfig.js".
+- Dentro del checkout hay una opción para habilitar un reset de stocks, por si estás testeando y te quedás sin stock (50 es la base con la que empieza cada carta). Se habilita presionando ctrl+x en dicha parte de la página: (".com/checkout"), hay un mensaje que te lo recuerda allí mismo. No es muy probable que suceda, pero mejor tener la solución a mano a no tenerla. (Toda esta sección no tiene versión en inglés porque solo fue desarrollada para el testeo.)
+- Los precios en USD de las cartas pueden no ser los mismos del día de corrección. Si los datos fueran de una API, se podría actualizar con mayor facilidad.
