@@ -28,5 +28,5 @@ Utilizo las librerías visuales Toastify y Sweet Alerts, y está la base de dato
 ## A tener en cuenta (Profesor)
 
 - Los datos de la Firebase están también incluidos y comentados en el archivo "./src/service/firebase/firebaseConfig.js".
-- Dentro del checkout hay una opción para habilitar un reset de stocks, por si estás testeando y te quedás sin stock (50 es la base con la que empieza cada carta). Se habilita presionando ctrl+x en dicha parte de la página: (".com/checkout"), hay un mensaje que te lo recuerda allí mismo. No es muy probable que suceda, pero mejor tener la solución a mano a no tenerla. (Toda esta sección no tiene versión en inglés porque solo fue desarrollada para el testeo.)
+- Dentro del checkout un reset de stocks, por si estás testeando y te quedás sin stock (50 es la base con la que empieza cada carta). No es muy probable que te suceda, pero mejor tener la solución a mano a no tenerla.
 - Los precios en USD de las cartas pueden no ser los mismos del día de corrección. Si los datos fueran de una API, se podría actualizar con mayor facilidad.
