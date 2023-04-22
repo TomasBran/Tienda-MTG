@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Tienda-MTG/static/css/main.32555b0c.css",
-    "main.js": "/Tienda-MTG/static/js/main.e564be17.js",
+    "main.css": "/Tienda-MTG/static/css/main.1b7f8c7d.css",
+    "main.js": "/Tienda-MTG/static/js/main.42023eea.js",
     "static/js/787.fb35135a.chunk.js": "/Tienda-MTG/static/js/787.fb35135a.chunk.js",
     "static/media/logo.png": "/Tienda-MTG/static/media/logo.3ea07d4cba89d26f6028.png",
     "static/media/cart-logo.png": "/Tienda-MTG/static/media/cart-logo.50651ba67058621172d1.png",
     "index.html": "/Tienda-MTG/index.html",
-    "main.32555b0c.css.map": "/Tienda-MTG/static/css/main.32555b0c.css.map",
-    "main.e564be17.js.map": "/Tienda-MTG/static/js/main.e564be17.js.map",
+    "main.1b7f8c7d.css.map": "/Tienda-MTG/static/css/main.1b7f8c7d.css.map",
+    "main.42023eea.js.map": "/Tienda-MTG/static/js/main.42023eea.js.map",
     "787.fb35135a.chunk.js.map": "/Tienda-MTG/static/js/787.fb35135a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32555b0c.css",
-    "static/js/main.e564be17.js"
+    "static/css/main.1b7f8c7d.css",
+    "static/js/main.42023eea.js"
   ]
 }
