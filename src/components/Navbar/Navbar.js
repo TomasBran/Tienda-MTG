@@ -8,10 +8,13 @@ import { useLanguage } from '../../context/LanguageContext'
 
 const Navbar = () => {
 
+    
     const [input, setInput] = useState('')
-
+    
     const { isSpanishActive } = useLanguage()
     const navigate = useNavigate()
+    
+    
 
     return (
 
